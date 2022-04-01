@@ -29,6 +29,7 @@ body {
     box-shadow: 0 2px 20px 1px rgba(46, 43, 43, 0.1);
 }
 
+/* header */
 .header {
     border-bottom: 1px solid #333; 
     margin-bottom: 12px; 
@@ -49,6 +50,7 @@ body {
     margin: 16px 0 10px 0;
 }
 
+/* form */
 .form-group {
     display: flex;
     margin-bottom: 16px;
@@ -104,6 +106,7 @@ body {
     margin-top: 1.5px;
 }
 
+/* sumbit */
 .submit {
     outline: none;
     background-color: #1dbfaf;

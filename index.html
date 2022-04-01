@@ -12,10 +12,12 @@
 
 <body>
     <div class="main">
+        <!-- Tiêu đề -->
         <div class="header">
             <h1 class="header-title">Mẫu khảo sát</h1>
             <p class="header-desc">Cảm ơn bạn đã dành thời gian để giúp chúng tôi cải thiện nền tảng</p>
         </div>
+        <!-- Nội dung -->
         <div class="form">
             <div class="form-group">
                 <label class="form-label" for="fullname">Tên đầy đủ:</label>
@@ -72,10 +74,12 @@
                 </label>
             </div>
         </div>
+        <!-- Nút sumbit -->
         <div onclick="showSuccessToast();" class="form-submit">
             <button class="submit">Gửi</button>
         </div>
     </div>
+    <!-- Thông báo -->
     <div id="toast"></div>
 
     <script>
@@ -85,7 +89,7 @@
             if (main) {
                 const toast = document.createElement('div');
 
-                // Auto remove toast
+                // Tự đông tắt thông báo
                 const autoRemoveId = setTimeout(function(){
                     main.removeChild(toast);
                 }, duration + 1000);
