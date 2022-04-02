@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Survey</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 </head>
@@ -14,30 +14,30 @@
     <div class="main">
         <!-- Tiêu đề -->
         <div class="header">
-            <h1 class="header-title">Mẫu khảo sát</h1>
+            <h1 class="header-title">Mẫu khảo sát sinh viên IT</h1>
             <p class="header-desc">Cảm ơn bạn đã dành thời gian để giúp chúng tôi cải thiện nền tảng</p>
         </div>
         <!-- Nội dung -->
         <div class="form">
             <div class="form-group">
                 <label class="form-label" for="fullname">Tên đầy đủ:</label>
-                <input class="form-control" name="fullname" type="text" placeholder="VD: Nguyễn Văn A">
+                <input class="form-control" id="fullname" type="text" placeholder="VD: Nguyễn Văn A">
             </div>
             <div class="form-group">
                 <label class="form-label" for="email">Email:</label>
-                <input class="form-control" name="email" type="text" placeholder="VD: email@gmail.com">
+                <input class="form-control" id="email" type="text" placeholder="VD: email@gmail.com">
             </div>
             <div class="form-group">
                 <label class="form-label" for="age">Tuổi:</label>
-                <input class="form-control" name="age" type="number" placeholder="VD: 18">
+                <input class="form-control" id="age" type="number" placeholder="VD: 18">
             </div>
             <div class="form-group">
                 <label class="form-label" for="school">Trường:</label>
-                <input class="form-control" name="school" type="text" placeholder="VD: Duy Tân">
+                <input class="form-control" id="school" type="text" placeholder="VD: Duy Tân">
             </div>
             <div class="form-group">
                 <label class="form-label" for="role">Bạn là:</label>
-                <select class="form-select" name="role" type="number" required>
+                <select class="form-select" id="role" type="number" required>
                     <option value="Student">Sinh viên năm 1</option>
                     <option value="Student">Sinh viên năm 2</option>
                     <option value="Student">Sinh viên năm 3</option>
@@ -84,7 +84,7 @@
 
     <script>
         // toast function
-        function toast({ title = '', message = '', type = '', duration ='', success=''}) {
+        function toast({ title = '', message = '', duration ='', success=''}) {
             const main = document.getElementById('toast');
             if (main) {
                 const toast = document.createElement('div');
