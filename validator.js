@@ -100,9 +100,9 @@ function Validator(options) {
                     options.onSubmit(formValues)
                 } 
                 // trường hợp submit với hành vi mặc định
-                else {
-                    formElement.submit()
-                }
+                //else {
+                    //formElement.submit()
+                //}
             }
         }
 
