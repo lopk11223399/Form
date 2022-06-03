@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
 </head>
 
 <body>
@@ -19,107 +21,120 @@
         </div>
         <!-- Nội dung -->
         <div class="form">
-            <div class="form-group">
-                <label class="form-label" for="fullname">Tên đầy đủ:</label>
-                <input class="form-control" id="fullname" type="text" placeholder="VD: Nguyễn Văn A">
-            </div>
-            <div class="form-group">
-                <label class="form-label" for="email">Email:</label>
-                <input class="form-control" id="email" type="text" placeholder="VD: email@gmail.com">
-            </div>
-            <div class="form-group">
-                <label class="form-label" for="age">Tuổi:</label>
-                <input class="form-control" id="age" type="number" placeholder="VD: 18">
-            </div>
-            <div class="form-group">
-                <label class="form-label" for="school">Trường:</label>
-                <input class="form-control" id="school" type="text" placeholder="VD: Duy Tân">
-            </div>
-            <div class="form-group">
-                <label class="form-label" for="role">Bạn là:</label>
-                <select class="form-select" id="role" type="number" required>
-                    <option value="Student">Sinh viên năm 1</option>
-                    <option value="Student">Sinh viên năm 2</option>
-                    <option value="Student">Sinh viên năm 3</option>
-                    <option value="Student">Sinh viên năm 4</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label class="form-label">Bạn muốn thấy những gì được cải thiện? (Kiểm tra tất cả những gì áp
-                    dụng)</label>
-                <label class="form-choose">
-                    <input name="prefer" type="checkbox" value="Front-end Projects">Dự án Front-end
-                </label>
-                <label class="form-choose">
-                    <input name="prefer" type="checkbox" value="Back-end Projects">Dự án Back-end
-                </label>
-                <label class="form-choose">
-                    <input name="prefer" type="checkbox" value="Data Visualization">Data Visualization
-                </label>
-                <label class="form-choose">
-                    <input name="prefer" type="checkbox" value="Challenges">Thử thách
-                </label>
-                <label class="form-choose">
-                    <input name="prefer" type="checkbox" value="Videos">Videos
-                </label>
-                <label class="form-choose">
-                    <input name="prefer" type="checkbox" value="Wiki">Bách khoa toàn thư
-                </label>
-                <label class="form-choose">
-                    <input name="prefer" type="checkbox" value="Forum">Diễn đàn
-                </label>
-                <label class="form-choose">
-                    <input name="prefer" type="checkbox" value="Additional Courses">Các khóa học bổ sung
-                </label>
-            </div>
-        </div>
-        <!-- Nút sumbit -->
-        <div onclick="showSuccessToast();" class="form-submit">
-            <button class="submit">Gửi</button>
+            <form action="" method="POST" class="form" id="form-1">
+                <div class="form-group">
+                    <label class="form-label" for="fullname">Tên đầy đủ:</label>
+                    <input class="form-control" id="fullname" name="fullname" type="text"
+                        placeholder="VD: Nguyễn Văn A">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="email">Email:</label>
+                    <input class="form-control" id="email" name="email" type="text" placeholder="VD: email@gmail.com">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="age">Tuổi:</label>
+                    <input class="form-control" id="age" name="age" type="number" placeholder="VD: 18">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="school">Trường:</label>
+                    <input class="form-control" id="school" name="school" type="text" placeholder="VD: Duy Tân">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="role">Bạn là:</label>
+                    <select class="form-select" id="role" name="role">
+                        <option value="Sinh viên năm 1">Sinh viên năm 1</option>
+                        <option value="Sinh viên năm 2">Sinh viên năm 2</option>
+                        <option value="Sinh viên năm 3">Sinh viên năm 3</option>
+                        <option value="Sinh viên năm 4">Sinh viên năm 4</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Bạn muốn thấy những gì được cải thiện? (Kiểm tra tất cả những gì áp
+                        dụng)</label>
+                    <div class="form-choose">
+                        <input name="prefer" type="checkbox" value="Dự án Front-end">
+                        Dự án Front-end
+                    </div>
+                    <div class="form-choose">
+                        <input name="prefer" type="checkbox" value="Dự án Back-end">
+                        Dự án Back-end
+                    </div>
+                    <div class="form-choose">
+                        <input name="prefer" type="checkbox" value="Data Visualization">
+                        Data Visualization
+                    </div>
+                    <div class="form-choose">
+                        <input name="prefer" type="checkbox" value="Thử thách">
+                        Thử thách
+                    </div>
+                    <div class="form-choose">
+                        <input name="prefer" type="checkbox" value="Videos">
+                        Videos
+                    </div>
+                    <div class="form-choose">
+                        <input name="prefer" type="checkbox" value="Bách khoa toàn thư">
+                        Bách khoa toàn thư
+                    </div>
+                    <div class="form-choose">
+                        <input name="prefer" type="checkbox" value="Diễn đàn">
+                        Diễn đàn
+                    </div>
+                    <div class="form-choose">
+                        <input name="prefer" type="checkbox" value="Các khóa học bổ sung">
+                        Các khóa học bổ sung
+                    </div>
+                    <span class="form-message"></span>
+                </div>
+                <!-- Nút sumbit -->
+                <div onclick="toast();" class="form-submit">
+                    <button class="submit">Gửi</button>
+                </div>
+
+            </form>
         </div>
     </div>
+
     <!-- Thông báo -->
     <div id="toast"></div>
 
+    <script src="./validator.js"></script>
+
+    <script src="./toast.js"></script>
+
     <script>
-        // toast function
-        function toast({ title = '', message = '', duration ='', success=''}) {
-            const main = document.getElementById('toast');
-            if (main) {
-                const toast = document.createElement('div');
 
-                // Tự đông tắt thông báo
-                const autoRemoveId = setTimeout(function(){
-                    main.removeChild(toast);
-                }, duration + 1000);
-
-                const delay = (duration/1000).toFixed(2);
-                
-                toast.classList.add('toast', `toast--success`)
-                toast.style.animation = `slideInLeft ease .3s, fadeOut linear 1s ${delay}s forwards;`;
-                toast.innerHTML = `
-                    <div class="toast__icon">
-                        <i class="${success}"></i>
-                    </div>
-                    <div class="toast__body">
-                        <h3 class="toast__title">${title}</h3>
-                        <p class="toast__msg">${message}</p>
-                    </div>
-                `;
-                main.appendChild(toast);
+        Validator({
+            form: '#form-1',
+            formGroupSelector: '.form-group',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequired('#fullname', 'Vui lòng nhập tên đầy đủ của bạn!'),
+                Validator.isName('#fullname'),
+                Validator.isRequired('#email', 'Vui lòng nhập email của bạn!'),
+                Validator.isEmail('#email'),
+                Validator.isRequired('#age', 'Vui lòng nhập tuổi của bạn!'),
+                Validator.isRequired('#role', 'Vui lòng lựa chọn 1 cái!'),
+                Validator.isRequired('input[name="prefer"]','Vui lòng chọn ít nhất 1 cái!')
+            ],
+            onSubmit: function (data) {
+                toast({
+                    title: 'Thành công!',
+                    message: 'Bạn đã gửi thành công. Cảm ơn bạn đã làm ❤️',
+                    type: 'success',
+                    duration: 1000,
+                    success: 'fas fa-check-circle',
+                })
+                console.log(data);
             }
-        }
+        })
 
-        function showSuccessToast() {
-            toast ({
-                title: 'Thành công!',
-                message: 'Bạn đã gửi thành công. Cảm ơn bạn đã làm ❤️',
-                type: 'success',
-                duration: 1000,
-                success: 'fas fa-check-circle',
-            })
-        }
     </script>
 </body>
+
 </html>

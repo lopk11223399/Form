@@ -62,6 +62,10 @@ body {
     padding-bottom: 6px;
     line-height: 1.8rem;
     font-size: 1.4rem;
+}
+
+.form-label,
+.form-message {
     text-align: left;
 }
 
@@ -104,6 +108,16 @@ body {
 .form-choose input {
     margin-right: 6px;
     margin-top: 1.5px;
+}
+
+.form-message {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding: 4px 0 0;
+}
+
+.form-group.invalid .form-message {
+    color: #f33a58;
 }
 
 /* sumbit */
